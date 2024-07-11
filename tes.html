@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details</title>
+    <style>
+        .hidden {
+    display: none;
+}
+
+    </style>
+</head>
+<body>
+    <button id="toggleButton">Show Project Details</button>
+    <div id="projectDetails" class="hidden">
+        <h2>Project Title</h2>
+        <p>Description of the project goes here.</p>
+        <ul>
+            <li>Detail 1</li>
+            <li>Detail 2</li>
+            <li>Detail 3</li>
+        </ul>
+    </div>
+    <script>
+        document.getElementById('toggleButton').addEventListener('click', function() {
+    var projectDetails = document.getElementById('projectDetails');
+    if (projectDetails.classList.contains('hidden')) {
+        projectDetails.classList.remove('hidden');
+        this.textContent = 'Hide Project Details';
+    } else {
+        projectDetails.classList.add('hidden');
+        this.textContent = 'Show Project Details';
+    }
+});
+
+    </script>
+</body>
+</html>
